@@ -7,7 +7,8 @@
     "start": "node build/app",
     "clean": "rm -rf build",
     "build": "yarn run clean && babel server -d build",
-    "dev": "DEBUG=server nodemon --exec babel-node server/app"
+    "dev": "DEBUG=server nodemon --exec babel-node server/app",
+    "postinstall": "yarn run build"
   },
   "dependencies": {
     "@babel/cli": "^7.10.1",
